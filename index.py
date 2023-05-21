@@ -35,10 +35,19 @@ def end_result():
     print('\nResultado Final do DataFrame:')
     print(df)
 
-
+def drop_columns():
+    if df is not None:
+        columns_name = simpledialog.askstring("Apagar Coluna:", "Digite o nome da coluna a ser deletada: ")
+        if columns_name in df.columns:
+            df.drop(columns_name, axis=1, inplace=True)
+            print(f'A coluna {columns_name}, foi deletada com sucesso')
+        else:
+            print(f'A coluna {columns_name}, não existe no dataframe')
+            
 janela = tk.Tk()
 janela.title("Automatizador de DataFrame")
-janela.geometry('300x400')
+janela.geometry('300x300')
+janela.configure(bg='lightgray')
 
 # Estilização dos botões
 style = ttk.Style()
@@ -68,10 +77,17 @@ rename_button = ttk.Button(janela, text='Renomear Coluna',
                            command=rename_coluna)
 rename_button.pack(pady=10)
 
+# APAGAR COLUNA
+result_button = ttk.Button(janela, text='Apagar coluna',
+                           command=drop_columns)
+result_button.pack(pady=10)
+
 # MOSTRAR RESULTADO FINAL
 result_button = ttk.Button(janela, text='Mostrar Resultado',
                            command=end_result)
 result_button.pack(pady=10)
 
-janela.configure(bg='lightgray')
+
+
+
 janela.mainloop()
