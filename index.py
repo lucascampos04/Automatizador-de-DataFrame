@@ -3,6 +3,7 @@ from tkinter import filedialog
 from tkinter import simpledialog
 from tkinter import ttk
 import pandas as pd
+from PIL import ImageTk, Image
 
 df = None
 
@@ -64,6 +65,13 @@ janela.title("Automatizador de DataFrame")
 janela.geometry('500x400')
 janela.configure(bg='lightgray')
 
+# IMAGEM
+img = Image.open('assistente-de-robo.png')
+img = img.resize((30, 30), Image.ANTIALIAS)
+img = ImageTk.PhotoImage(img)
+app_logo = tk.Label(janela, image=img, bg='lightgray')
+app_logo.place(x=20, y=10)
+
 # Estilização dos botões
 style = ttk.Style()
 style.configure('TButton', font=('Arial', 10, 'bold'), foreground='blue')
@@ -93,9 +101,7 @@ rename_button = ttk.Button(left_frame, text='Renomear Coluna', command=rename_co
 rename_button.pack(pady=10)
 
 # APAGAR COLUNA
-result_button = ttk.Button(left_frame, text='Apagar coluna', command
-
-=drop_columns)
+result_button = ttk.Button(left_frame, text='Apagar coluna', command=drop_columns)
 result_button.pack(pady=10)
 
 # CALCULAR ESTATÍSTICAS

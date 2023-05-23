@@ -1,0 +1,20 @@
+Automatizador de DataFrame
+
+O "Automatizador de DataFrame" é um programa em Python que permite realizar operações comuns em DataFrames de arquivos CSV de forma rápida e fácil. Utilizando a biblioteca Tkinter para criar uma interface gráfica intuitiva, o programa oferece diversas opções para manipulação e análise de dados.
+
+Principais funcionalidades:
+Abrir arquivo: Permite selecionar um arquivo CSV para carregar o DataFrame e iniciar as operações.
+Exibir informações: Mostra informações essenciais sobre o DataFrame, como número de linhas e colunas, tipos de dados e resumo estatístico.
+Limpar os dados: Remove os valores ausentes (NaN) do DataFrame, garantindo dados mais limpos e consistentes.
+Renomear coluna: Permite renomear uma coluna específica do DataFrame, fornecendo o nome atual da coluna e o novo nome desejado.
+Apagar coluna: Permite excluir uma coluna do DataFrame, informando o nome da coluna a ser removida.
+Mostrar resultado final: Exibe o DataFrame resultante após a aplicação das operações selecionadas, apresentando o resultado final da manipulação dos dados.
+
+Opções futurasa serem adicionadas
+
+Filtrar dados: Possibilitará a seleção de um critério de filtragem para restringir os dados exibidos no DataFrame, facilitando a análise de subconjuntos de dados específicos.
+Visualização gráfica: Adição de gráficos e visualizações para melhor compreensão dos dados, permitindo uma análise visual mais intuitiva.
+Exportar resultados: Opção para salvar o DataFrame resultante em um novo arquivo CSV, possibilitando o uso dos dados manipulados em outros contextos ou aplicações.
+
+O "Automatizador de DataFrame" é uma ferramenta útil para cientistas de dados, analistas e qualquer pessoa que trabalhe com a manipulação e análise de dados em arquivos CSV. Com uma interface amigável e funcionalidades práticas, o programa agiliza tarefas comuns, economizando tempo e facilitando o processo de exploração e transformação de dados.
+Nota: Certifique-se de ter as bibliotecas necessárias instaladas (como Tkinter e pandas) para executar o código corretamente.
